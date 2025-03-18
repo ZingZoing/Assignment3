@@ -3,22 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <title>My First Webpage</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1 id="title">Hello H1</h1>
-    <h2>Hello H2</h2>
-    <h2>Hello H2</h2>
-    <p class="special">Mr. Qayum</p>
-    <p class="special">Mrs. Qayum</p>
-    <script defer src="script.js"></script>
+    <div class="container">
+        <h1>Quadratic Formula</h1>
+        <form id="quad-form">
+            <label for="a">a value:</label>
+            <input type="number" id="a" name="a" required />
+            <label for="b">b value:</label>
+            <input type="number" id="b" name="b" required />
+            <label for="c">c value:</label>
+            <input type="number" id="c" name="c" required />
+            <label for="result">Result:</label>
+            <input type="text" id="result" name="result" />
+            <input type="submit" value="Calculate" />
+        </form>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
