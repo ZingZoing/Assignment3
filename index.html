@@ -3,22 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <title>My First Webpage</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1 id="title">Hello H1</h1>
-    <h2>Hello H2</h2>
-    <h2>Hello H2</h2>
-    <p class="special">Mr. Qayum</p>
-    <p class="special">Mrs. Qayum</p>
-    <script defer src="script.js"></script>
+    <div class="Herons">
+        <h1>Heron's Formula not working</h1>
+        <form id="Heron-form">
+            <label for="SideA">Angle a:</label>
+            <input type="number" id="SideA" name="SideA" required />
+            <label for="SideB">Angle b:</label>
+            <input type="number" id="SideB" name="SideB" required />
+            <label for="SideC">Angle c:</label>
+            <input type="number" id="SideC" name="SideC" required />
+            <label for="Hresult">Triangle Type (Result):</label>
+            <input type="text" id="Hresult" name="Hresult" />
+            <input type="submit" value="Calculate" />
+        </form>
+    </div>
+
+    <div class="Ambiguous">
+        <h1>Ambiguous Case not working</h1>
+        <form id="Ambiguous-form">
+            <label for="AngleA">Side a:</label>
+            <input type="number" id="AngleA" name="AngleA" required />
+            <label for="AngleB">Side b:</label>
+            <input type="number" id="AngleB" name="AngleB" required />
+            <label for="AngleC">Side c:</label>
+            <input type="number" id="AngleC" name="AngleC" required />
+            <label for="Aresult">Area (Result):</label>
+            <input type="text" id="Aresult" name="Aresult" />
+            <input type="submit" value="Calculate" />
+        </form>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
