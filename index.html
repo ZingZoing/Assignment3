@@ -9,17 +9,32 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Quadratic Formula</h1>
-        <form id="quad-form">
-            <label for="a">a value:</label>
-            <input type="number" id="a" name="a" required />
-            <label for="b">b value:</label>
-            <input type="number" id="b" name="b" required />
-            <label for="c">c value:</label>
-            <input type="number" id="c" name="c" required />
-            <label for="result">Result:</label>
-            <input type="text" id="result" name="result" />
+    <div class="Herons">
+        <h1>Heron's Formula not working</h1>
+        <form id="Heron-form">
+            <label for="SideA">Angle a:</label>
+            <input type="number" id="SideA" name="SideA" required />
+            <label for="SideB">Angle b:</label>
+            <input type="number" id="SideB" name="SideB" required />
+            <label for="SideC">Angle c:</label>
+            <input type="number" id="SideC" name="SideC" required />
+            <label for="Hresult">Triangle Type (Result):</label>
+            <input type="text" id="Hresult" name="Hresult" />
+            <input type="submit" value="Calculate" />
+        </form>
+    </div>
+
+    <div class="Ambiguous">
+        <h1>Ambiguous Case not working</h1>
+        <form id="Ambiguous-form">
+            <label for="AngleA">Side a:</label>
+            <input type="number" id="AngleA" name="AngleA" required />
+            <label for="AngleB">Side b:</label>
+            <input type="number" id="AngleB" name="AngleB" required />
+            <label for="AngleC">Side c:</label>
+            <input type="number" id="AngleC" name="AngleC" required />
+            <label for="Aresult">Area (Result):</label>
+            <input type="text" id="Aresult" name="Aresult" />
             <input type="submit" value="Calculate" />
         </form>
     </div>
