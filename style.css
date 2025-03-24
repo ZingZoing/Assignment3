@@ -1,7 +1,9 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 380px);
+  grid-row-gap: 20px;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -14,6 +16,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
+  height: 500px;
   text-align: center;
 }
 .Ambiguous {
@@ -22,6 +25,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
+  height: 500px;
   text-align: center;
 }
 .Newtons {
@@ -30,6 +34,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
+  height: 500px;
   text-align: center;
 }
 .Polynomial {
@@ -38,6 +43,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
+  height: 500px;
   text-align: center;
 }
 
@@ -59,6 +65,14 @@ label {
 }
 
 input[type="number"], input[type="text"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="string"], input[type="text"] {
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
