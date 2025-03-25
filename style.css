@@ -72,6 +72,14 @@ input[type="number"], input[type="text"] {
   font-size: 16px;
 }
 
+input[type="double"], input[type="text"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
 input[type="submit"] {
   background-color: #4CAF50;
   color: white;

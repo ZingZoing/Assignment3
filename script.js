@@ -50,11 +50,42 @@ document.getElementById("Poly-form").addEventListener('submit', (event) => {
   event.preventDefault();
   const Coefficients = document.getElementById("Coefficients").value;
   const Exponents = document.getElementById("Exponents").value;
-  const x = document.getElementById("x").value;
+  const x2 = parseFloat(document.getElementById("x2").value);
 
-  const Function = Coefficients.split("");
-  const Derivative = Exponents.split(".");
+  if (isNaN(x2)) {
+    alert("x is invalid");
+    return;
+  }
 
-  document.getElementById("Presult1").value = Function;
-  document.getElementById("Presult2").value = Exponents;
-})
+  const Co = Coefficients.split(" ").map(Number);
+  const Ex = Exponents.split(" ").map(Number);
+
+  if (Co.some(isNaN) || Ex.some(isNaN)) {
+    alert("either or both coefficients or exponents is invalid");
+    return;
+  }
+
+  if (Co.length !== Ex.length) {
+    alert("the number of coefficients and exponents is not equal");
+    return;
+  }
+
+  let PolynomialFunction = "";
+  let PolynomialEvaluation = 0;
+
+  for (let i = 0; i < Co.length; i++) {
+    if (i > 0 && Co[i] > 0) {
+      PolynomialFunction += ` + ${Co[i]}x^${Ex[i]}`;
+    } else if (Co[i] < 0) {
+      PolynomialFunction += ` - ${Math.abs(Co[i])}x^${Ex[i]}`;
+    } else if (Co[i] === 0) {
+      continue;
+    } else {
+      PolynomialFunction += `${Co[i]}x^${Ex[i]}`;
+    }
+    PolynomialEvaluation += Co[i] * Math.pow(x2, Ex[i]);
+  }
+
+  document.getElementById("Presult1").value = PolynomialFunction.trim();
+  document.getElementById("Presult2").value = PolynomialEvaluation;
+});
